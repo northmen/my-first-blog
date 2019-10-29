@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
 #from .pcolormesh import *
-from matplotlib.backends.backend_agg import FigureCanvasAgg
+#from matplotlib.backends.backend_agg import FigureCanvasAgg
 from django.http import HttpResponse
 #import numpy as np
 #import matplotlib.pyplot as plt
