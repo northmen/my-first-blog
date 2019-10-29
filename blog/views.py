@@ -13,10 +13,10 @@ def post_list(request):
     posts = Post.objects.order_by('published_date')
     return render(request, 'blog/post_list.html', {})
 
-from flask import Flask, render_template, jsonify
-import test
+#from flask import Flask, render_template, jsonify
+#import test
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 #@app.route('/', methods=['POST', 'GET'])
 #def index():
