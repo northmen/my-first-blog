@@ -4,8 +4,8 @@ from .models import Post
 #from .pcolormesh import *
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from django.http import HttpResponse
-import numpy as np
-import matplotlib.pyplot as plt
+#import numpy as np
+#import matplotlib.pyplot as plt
 
 # Create your views here.
 def post_list(request):
@@ -18,13 +18,13 @@ import test
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST', 'GET'])
-def index():
-    if request.method == "POST":
-        plt.plot([1,2], [1,2])
-        plt.show()
+#@app.route('/', methods=['POST', 'GET'])
+#def index():
+#    if request.method == "POST":
+#        plt.plot([1,2], [1,2])
+#        plt.show()#
 
-    return render_template('index.html')
+#    return render_template('index.html')
 """
 def post_list(request):
     # Data for plotting
