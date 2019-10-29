@@ -1,22 +1,105 @@
+{% load static %}
+
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Orangutan</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
+        <div class="container">
+	        <div>
+	            <div class="page-header">
+				    <h1><a href="/"">Orangutan</a></h1>
+				</div>
+	        </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
+	        
+			<a class="container">xuy</a>
+			
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+	        <div class="content container">
+			    <div class="row">
+			        <div class="col-md-8">
+			            {% for post in posts %}
+			                <div class="post">
+							    <p>published: {{ post.published_date }}</p>
+							    <h1><a href="">{{ post.title }}</a></h1>
+							    <p>{{ post.text|linebreaksbr }}</p>
+							</div>
+			            {% endfor %}
+			        </div>
+			    </div>
+			</div>
+
+			<div class="container">
+				<div class="subnav">
+					<!-- <a href = "xuy" class> xuy </a>
+					<a href = "xuy" class> xuy </a>
+					<a href = "xuy" class> xuy </a> -->
+					<button type="button" class="btn btn-info">New Record</button>
+					<button type="button" class="btn btn-info">Analyse</button>
+					<button type="button" class="btn btn-info">Play</button>
+					<button type="button" class="btn btn-info">Tabs</button>
+					<button type="button" class="btn btn-info">Pattern</button>
+					<button type="button" class="btn btn-info">Filtered</button>
+					<button type="button" class="btn btn-info">Convert</button>
+				</div>
+			</div>
+
+			<!-- <img src="static/piano.jpg" class="img-fluid" alt="Responsive image", width = 1000>
+			<img src="static/piano.jpg"> -->
+			<div class="container">
+				<img src="static/icon.png">
+			</div>
+
+			<div class="subnav">
+				<!-- <a href = "xuy" class> xuy </a>
+				<a href = "xuy" class> xuy </a>
+				<a href = "xuy" class> xuy </a> -->
+				<button type="button" class="btn btn-info">New Record</button>
+				<button type="button" class="btn btn-info">Pro</button>
+				<button type="button" class="btn btn-info">Grid</button>
+				<button type="button" class="btn btn-info">Original</button>
+				<button type="button" class="btn btn-info">Help</button>
+			
+
+
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-secondary">Guitar</button>
+					<button type="button" class="btn btn-secondary">Piano</button>
+				</div>
+
+			</div>
+
+			<div/>
+
+			<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+			  <button type="button" class="btn btn-secondary">1</button>
+			  <button type="button" class="btn btn-secondary">2</button>
+
+			  <div class="btn-group" role="group">
+			    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			      Dropdown
+			    </button>
+			    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+			      <a class="dropdown-item" href="#">Dropdown link</a>
+			      <a class="dropdown-item" href="#">Dropdown link</a>
+			    </div>
+			  </div>
+			</div>
+		
+
+
+			<div data-section-id="02 - PartnerBar"><div class="PartnerBar bg-bw-2"><div class="container"><div class="row py-6 row--justify-between d-sm-flex"><div class="col-xs-4 PartnerBar__item py-3 py-sm-0 text-center"><span class="SVG-wrapper"><img src="https://s1.nordcdn.com/nordvpn/media/1.232.0/images/global/logos/horizontal/wired-grey.svg" alt="Wired" class="SVG img-responsive center-block" /></span></div><div class="col-xs-4 PartnerBar__item py-3 py-sm-0 text-center"><span class="SVG-wrapper"><img src="https://s1.nordcdn.com/nordvpn/media/1.232.0/images/global/logos/horizontal/huffington-post-grey.svg" alt="The Huffington Post" class="SVG img-responsive center-block" /></span></div><div class="col-xs-4 PartnerBar__item py-3 py-sm-0 text-center"><span class="SVG-wrapper"><img src="https://s1.nordcdn.com/nordvpn/media/1.232.0/images/global/logos/horizontal/buzzfeed-grey.svg" alt="Buzzfeed" class="SVG img-responsive center-block" /></span></div><div class="col-xs-4 PartnerBar__item py-3 py-sm-0 text-center"><span class="SVG-wrapper"><img src="https://s1.nordcdn.com/nordvpn/media/1.232.0/images/global/logos/horizontal/forbes-grey.svg" alt="Forbes" class="SVG img-responsive center-block" /></span></div><div class="col-xs-4 PartnerBar__item py-3 py-sm-0 text-center"><span class="SVG-wrapper"><img src="https://s1.nordcdn.com/nordvpn/media/1.232.0/images/global/logos/horizontal/the-guardian-grey.svg" alt="The Guardian" class="SVG img-responsive center-block" /></span></div><div class="col-xs-4 PartnerBar__item py-3 py-sm-0 text-center"><span class="SVG-wrapper"><img src="https://s1.nordcdn.com/nordvpn/media/1.232.0/images/global/logos/horizontal/bbc-grey.svg" alt="BBC" class="SVG img-responsive center-block" /></span></div></div></div></div></div>
+
+
+			<section class=""><div class="VideoTestimonialsAlt"><div class="container pt-7 pb-9 pt-sm-11 pb-sm-13 pb-md-15 pt-lg-13">drhnfn</div></div></section>
+
+
+		</div>
+		
+
     </body>
 </html>
